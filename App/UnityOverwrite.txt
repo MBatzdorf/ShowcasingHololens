@@ -5,14 +5,14 @@
 # Write a line equal to 'overwrite-all' (without quotes) to overwrite everything (preserved accross builds)
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
-ShowcasingHololens.sln: 8FA12574686479CB1F38BF707D13280F
+ShowcasingHololens.sln: E4FED5155E630BAAF11D8EE98C4EC6F7
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 GeneratedProjects\UWP\Assembly-CSharp-firstpass\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 ShowcasingHololens\App.cs: modified
-ShowcasingHololens\Package.appxmanifest: A3FD3876E64F4EAAD790B0BB97B3AF45
+ShowcasingHololens\Package.appxmanifest: 9242FF9E956F7C6568F12194A18202CE
 ShowcasingHololens\project.json: 1D02BC64BAC0D041019673A1C4C51737
-ShowcasingHololens\ShowcasingHololens.csproj: FD393307B8FAD65113CA6EF609269952
-ShowcasingHololens\ShowcasingHololens.csproj.user: BEFB8AC4886C4CFDD3C68445D6F19B04
+ShowcasingHololens\ShowcasingHololens.csproj: 8323281B36C41802651E60744B4AE740
+ShowcasingHololens\ShowcasingHololens.csproj.user: modified
 ShowcasingHololens\Assets\SplashScreen.scale-200.png: 60618416282ED104FD1473935716045D
 ShowcasingHololens\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
 ShowcasingHololens\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870A9D564953775DE

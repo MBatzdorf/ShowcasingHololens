@@ -4,7 +4,7 @@
   <mp:PhoneIdentity PhoneProductId="3f991afe-3a33-4437-bbb4-1b14f3f743df" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>ShowcasingHololens</DisplayName>
-    <PublisherDisplayName>DefaultCompany</PublisherDisplayName>
+    <PublisherDisplayName>Praxisseminar_UniversitätRegensburg</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -27,4 +27,8 @@
       </uap:VisualElements>
     </Application>
   </Applications>
+  <Capabilities>
+    <uap2:Capability Name="spatialPerception" />
+    <DeviceCapability Name="microphone" />
+  </Capabilities>
 </Package>
