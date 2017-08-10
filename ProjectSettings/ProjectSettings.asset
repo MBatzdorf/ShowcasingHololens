@@ -507,11 +507,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: ShowcasingHololens
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: C:\Users\mbatz\OneDrive\Dokumente\UnityProjects\ShowcasingHololens\Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 00511777ce30d401
   metroApplicationDescription: ShowcasingHololens
   wsaImages: {}
   metroTileShortName: 
