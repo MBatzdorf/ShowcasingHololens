@@ -31,6 +31,8 @@ public class GestureManager : MonoBehaviour {
         NavigationRecognizer.NavigationUpdatedEvent += OnUpdated;
         NavigationRecognizer.NavigationCompletedEvent += OnCompleted;
         NavigationRecognizer.NavigationCanceledEvent += OnCanceled;
+
+        NavigationRecognizer.StartCapturingGestures();
     }
 
     void OnDestroy()

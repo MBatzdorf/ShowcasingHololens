@@ -1,11 +1,12 @@
-﻿using Academy.HoloToolkit.Unity;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// Placeholder script for exploding the model.
 /// </summary>
-public class ExpandModel : Singleton<ExpandModel>
+public class ExpandModel : MonoBehaviour
 {
+    public ExpandModel Instance { get; private set; }
+
     // We are using a different model for the expanded view.  Set it here so we can swap it out when we expand.
     [Tooltip("Game object for the exploded model.")]
     public GameObject ExpandedModel;
@@ -19,6 +20,7 @@ public class ExpandModel : Singleton<ExpandModel>
 
     void Awake()
     {
+        Instance = this;
         IsModelExpanded = false;
     }
 

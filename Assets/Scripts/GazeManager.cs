@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using Academy.HoloToolkit.Unity;
-
 // Taken and adapted from https://developer.microsoft.com/en-us/windows/mixed-reality/holograms_101e
 
 public class GazeManager : MonoBehaviour {

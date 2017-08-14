@@ -1,5 +1,4 @@
-﻿using Academy.HoloToolkit.Unity;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
 /// InteractibleAction performs custom actions when you gaze at the holograms.

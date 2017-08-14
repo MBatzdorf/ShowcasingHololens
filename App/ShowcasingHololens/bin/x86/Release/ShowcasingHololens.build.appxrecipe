@@ -421,17 +421,29 @@
     <AppxPackagedFile Include="C:\Users\Alex\Documents\Studium\Praxisseminar\ShowcasingHololens\App\ShowcasingHololens\Data\globalgamemanagers.assets">
       <PackagePath>Data\globalgamemanagers.assets</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Alex\Documents\Studium\Praxisseminar\ShowcasingHololens\App\ShowcasingHololens\Data\resources.assets">
+      <PackagePath>Data\resources.assets</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Alex\Documents\Studium\Praxisseminar\ShowcasingHololens\App\ShowcasingHololens\Data\sharedassets0.assets">
       <PackagePath>Data\sharedassets0.assets</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Alex\Documents\Studium\Praxisseminar\ShowcasingHololens\App\ShowcasingHololens\Data\level0.resS">
       <PackagePath>Data\level0.resS</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Alex\Documents\Studium\Praxisseminar\ShowcasingHololens\App\ShowcasingHololens\Data\resources.assets.resS">
+      <PackagePath>Data\resources.assets.resS</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Alex\Documents\Studium\Praxisseminar\ShowcasingHololens\App\ShowcasingHololens\Data\sharedassets0.assets.resS">
       <PackagePath>Data\sharedassets0.assets.resS</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Alex\Documents\Studium\Praxisseminar\ShowcasingHololens\App\ShowcasingHololens\Data\managedAssemblies.txt">
       <PackagePath>Data\managedAssemblies.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Alex\Documents\Studium\Praxisseminar\ShowcasingHololens\App\ShowcasingHololens\Data\resources.resource">
+      <PackagePath>Data\resources.resource</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Alex\Documents\Studium\Praxisseminar\ShowcasingHololens\App\ShowcasingHololens\Data\sharedassets0.resource">
+      <PackagePath>Data\sharedassets0.resource</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.15063.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
