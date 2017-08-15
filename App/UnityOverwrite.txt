@@ -11,7 +11,7 @@ GeneratedProjects\UWP\Assembly-CSharp-firstpass\project.json: 4FCF72A4D5EDB37E24
 ShowcasingHololens\App.cs: BE5A92899902CFD5033A3CEF05B55833
 ShowcasingHololens\Package.appxmanifest: 314412BF85A4DCD5141EE52E47AD0C6C
 ShowcasingHololens\project.json: 1D02BC64BAC0D041019673A1C4C51737
-ShowcasingHololens\ShowcasingHololens.csproj: 487D1DB66808931B8BD80F80A6F05141
+ShowcasingHololens\ShowcasingHololens.csproj: 5983C11A9C1549BB0657DE86899FC3AB
 ShowcasingHololens\ShowcasingHololens.csproj.user: modified
 ShowcasingHololens\Assets\SplashScreen.scale-200.png: 60618416282ED104FD1473935716045D
 ShowcasingHololens\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
