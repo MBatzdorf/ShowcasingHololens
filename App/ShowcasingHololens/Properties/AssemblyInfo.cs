@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ShowcasingHololens")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("DefaultCompany")]
+[assembly: AssemblyCompany("Praxisseminar_UniversitätRegensburg")]
 [assembly: AssemblyProduct("ShowcasingHololens")]
-[assembly: AssemblyCopyright("Copyright © DefaultCompany 2015")]
+[assembly: AssemblyCopyright("Copyright © Praxisseminar_UniversitätRegensburg 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -1,0 +1,4 @@
+C:\Users\mbatz\OneDrive\Dokumente\UnityProjects\ShowcasingHololens\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86
+C:\Users\mbatz\OneDrive\Dokumente\UnityProjects\ShowcasingHololens\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
+C:\Users\mbatz\OneDrive\Dokumente\UnityProjects\ShowcasingHololens\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
+C:\Users\mbatz\OneDrive\Dokumente\UnityProjects\ShowcasingHololens\App\ShowcasingHololens\ShowcasingHololens.csproj;x86
