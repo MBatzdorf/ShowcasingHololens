@@ -37,7 +37,7 @@ public class GazeManager : MonoBehaviour {
 			FocusedObject = null;
 		}
 
-		if (FocusedObject != oldFocusedObject) {
+		if (FocusedObject != oldFocusedObject && FocusedObject != null) {
 			Debug.Log ("Gaze is now at object \"" + FocusedObject.name + "\"");
 			// TODO: react on gaze
 		}
