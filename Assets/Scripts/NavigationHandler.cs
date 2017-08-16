@@ -7,7 +7,7 @@ using System;
 
 public class NavigationHandler : MonoBehaviour, INavigationHandler {
 
-    public float RotationSensitivity = 10.0f;
+    public float RotationSensitivity = 3.0f;
         
     public void OnNavigationStarted(NavigationEventData eventData)
     {
@@ -19,7 +19,7 @@ public class NavigationHandler : MonoBehaviour, INavigationHandler {
         float rotationFactorX = eventData.CumulativeDelta.y * RotationSensitivity;
         float rotationFactorY = eventData.CumulativeDelta.x * RotationSensitivity;
         float rotationFactorZ = eventData.CumulativeDelta.z * RotationSensitivity;
-        this.transform.Rotate(new Vector3(-1 * rotationFactorX, -1 * rotationFactorY, -1 * rotationFactorZ));
+        this.transform.Rotate(new Vector3(rotationFactorX, -1 * rotationFactorY, 0));
     }
 
     public void OnNavigationCompleted(NavigationEventData eventData)
