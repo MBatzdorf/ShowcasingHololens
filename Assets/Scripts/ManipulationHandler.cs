@@ -5,25 +5,32 @@ using UnityEngine;
 using System;
 
 public class ManipulationHandler : MonoBehaviour, IManipulationHandler {
+
+    private Vector3 previousPosition;
+
+
     public void OnManipulationCanceled(ManipulationEventData eventData)
     {
-        throw new NotImplementedException();
+        return;
     }
 
     public void OnManipulationCompleted(ManipulationEventData eventData)
     {
-        throw new NotImplementedException();
+        return;
     }
 
     public void OnManipulationStarted(ManipulationEventData eventData)
     {
-        throw new NotImplementedException();
+        previousPosition = eventData.CumulativeDelta;
     }
 
     public void OnManipulationUpdated(ManipulationEventData eventData)
     {
-        Vector3 inputData = eventData.CumulativeDelta;
-
+        Vector3 movementVector = new Vector3(0, 0, 0);
+        Vector3 currentPosition = eventData.CumulativeDelta;
+        movementVector = currentPosition - previousPosition;
+        previousPosition = currentPosition;
+        transform.position += movementVector;
     }
 
 }
