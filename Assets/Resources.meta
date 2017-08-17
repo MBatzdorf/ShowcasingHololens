@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: e0a89b9ab58078a42bed5d72baf6064b
+folderAsset: yes
+timeCreated: 1502541225
+=======
 guid: 3764d1f62ea14d8469bd32f97043b481
 folderAsset: yes
 timeCreated: 1502803572
+>>>>>>> Alex
 licenseType: Free
 DefaultImporter:
   userData: 
