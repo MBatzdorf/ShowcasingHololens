@@ -6,8 +6,13 @@ using System;
 
 public class ManipulationHandler : MonoBehaviour, IManipulationHandler {
 
+    public bool IsActive { get; set; }
     private Vector3 previousPosition;
 
+    private void Awake()
+    {
+        IsActive = false;
+    }
 
     public void OnManipulationCanceled(ManipulationEventData eventData)
     {
@@ -21,16 +26,26 @@ public class ManipulationHandler : MonoBehaviour, IManipulationHandler {
 
     public void OnManipulationStarted(ManipulationEventData eventData)
     {
-        previousPosition = eventData.CumulativeDelta;
+        if (IsActive)
+        {
+            previousPosition = eventData.CumulativeDelta;
+        }
+        return;
     }
 
     public void OnManipulationUpdated(ManipulationEventData eventData)
     {
-        Vector3 movementVector = new Vector3(0, 0, 0);
-        Vector3 currentPosition = eventData.CumulativeDelta;
-        movementVector = currentPosition - previousPosition;
-        previousPosition = currentPosition;
-        transform.position += movementVector;
+        if (IsActive)
+        {
+            Vector3 movementVector = new Vector3(0, 0, 0);
+            Vector3 currentPosition = eventData.CumulativeDelta;
+            movementVector = currentPosition - previousPosition;
+            previousPosition = currentPosition;
+            transform.position += movementVector;
+        }
+        return;
+        
     }
+
 
 }

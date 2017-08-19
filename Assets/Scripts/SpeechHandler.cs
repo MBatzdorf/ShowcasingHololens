@@ -2,20 +2,34 @@
 using UnityEngine;
 using System;
 
-public class SpeechHandler : MonoBehaviour, ISpeechHandler{
+public class SpeechHandler : MonoBehaviour{
 
-    public void OnSpeechKeywordRecognized(SpeechKeywordRecognizedEventData eventData)
+    private ManipulationHandler manipulationHandler;
+    private NavigationHandler navigationHandler;
+
+    private void Awake()
     {
-        throw new NotImplementedException();
+        manipulationHandler = GetComponent<ManipulationHandler>();
+        navigationHandler = GetComponent<NavigationHandler>();
+        ResetGestureHandler();
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private void ResetGestureHandler()
+    {
+        OnActivateNavigation();
+    }
+
+    public void OnActivateNavigation()
+    {
+        Debug.Log("On activate navigation");
+        manipulationHandler.IsActive = false;
+        navigationHandler.IsActive = true;
+    }
+
+    public void OnActivateManipulation()
+    {
+        Debug.Log("On activate manipulation");
+        manipulationHandler.IsActive = true;
+        navigationHandler.IsActive = false;
+    }
 }
