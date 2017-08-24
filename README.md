@@ -9,3 +9,4 @@ To (re)create the VisualStudio project files follow the instructions at https://
 
 ## Used Libraries
 + https://github.com/Microsoft/MixedRealityToolkit-Unity
++ https://developer.vuforia.com/downloads/sdk
