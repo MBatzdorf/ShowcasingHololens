@@ -4,37 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class UIManipulationHandler : MonoBehaviour, IManipulationHandler {
+public class UIManipulationHandler : MonoBehaviour, IInputClickHandler {
 
 	public Transform canvas;
-	private Vector3 previousPosition;
 
 	private void Awake()
 	{
 	}
 
-	public void OnManipulationCanceled(ManipulationEventData eventData)
+	public void OnInputClicked(InputClickedEventData eventData)
 	{
-		return;
-	}
-
-	public void OnManipulationCompleted(ManipulationEventData eventData)
-	{
-		return;
-	}
-
-	public void OnManipulationStarted(ManipulationEventData eventData)
-	{
-			previousPosition = eventData.CumulativeDelta;
-	}
-
-	public void OnManipulationUpdated(ManipulationEventData eventData)
-	{
-		Debug.Log("UPDATING UI MANIPULATION");
-			Vector3 movementVector = new Vector3(0, 0, 0);
-			Vector3 currentPosition = eventData.CumulativeDelta;
-			movementVector = currentPosition - previousPosition;
-			previousPosition = currentPosition;
-			canvas.position += movementVector;
+		GameObject camera = GameObject.FindGameObjectWithTag ("MainCamera");
+		if(canvas.parent == camera.transform)
+		{
+			Vector3 tempPos = canvas.transform.position;
+			canvas.SetParent (null);
+			canvas.transform.position = tempPos;
+		}
+		else
+		{
+		canvas.SetParent (camera.transform);
+		}
 	}
 }
