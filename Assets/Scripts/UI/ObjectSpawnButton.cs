@@ -39,8 +39,8 @@ public class ObjectSpawnButton : MonoBehaviour {
 			interactableObject.transform.SetParent (null);
 			interactableObject.transform.position = spawnPosition.position;
 			interactableObject.transform.localScale = tmpScale;
-			interactableObject.GetComponent<Renderer> ().enabled = true;
-			interactableObject.GetComponent<Collider> ().enabled = true;
+			interactableObject.GetComponentInChildren<Renderer> ().enabled = true;
+			interactableObject.GetComponentInChildren<Collider> ().enabled = true;
 
 			Debug.Log ("Button " + objectName.text + " clicked.");
 		}

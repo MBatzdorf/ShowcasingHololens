@@ -8,6 +8,6 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: dd6799e4f1227244ebdf09b03302967e
-  - enabled: 1
-    path: Assets/Scenes/InteractionScene.unity
+  - enabled: 0
+    path: 
     guid: 149b0d1f7ab422f4e97f315fd677e889
