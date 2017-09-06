@@ -359,7 +359,7 @@ Transform:
   m_Children:
   - {fileID: 1123851718}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &863083889
 GameObject:
@@ -517,7 +517,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
+  m_DynamicPixelsPerUnit: 10
 --- !u!223 &1060058605
 Canvas:
   m_ObjectHideFlags: 0
@@ -551,11 +551,11 @@ RectTransform:
   - {fileID: 1519431830}
   - {fileID: 1189134095}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1.122}
   m_SizeDelta: {x: 670, y: 326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1120690429
@@ -641,8 +641,8 @@ GameObject:
   - component: {fileID: 1123851721}
   - component: {fileID: 1123851720}
   - component: {fileID: 1123851719}
-  - component: {fileID: 1123851722}
   - component: {fileID: 1123851723}
+  - component: {fileID: 1123851722}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -719,7 +719,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1123851713}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.199, y: 0.099, z: -0.608}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 837410376}
@@ -803,10 +803,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1123851713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e23b9160c070f04e8801e0bca9e9401, type: 3}
+  m_Script: {fileID: 11500000, guid: e6c8a3503d77b424f80a7734d0eee30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonText: {fileID: 2053442527}
+  slider: {fileID: 1388147051}
 --- !u!114 &1123851723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -815,10 +815,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1123851713}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bda5138967965564cbf0525aa4ecd775, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d7f02d170ea7314ba00a6e6c465a694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1189134096}
+  buttonText: {fileID: 2053442527}
 --- !u!1 &1189134094
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,7 +902,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1123851723}
+      - m_Target: {fileID: 1123851722}
         m_MethodName: OnChangeScale
         m_Mode: 1
         m_Arguments:
@@ -952,7 +952,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013535415816, guid: b2db04283121ca74495c2ee000fb4243, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1000012943254746, guid: b2db04283121ca74495c2ee000fb4243, type: 2}
       propertyPath: m_Name
@@ -960,6 +960,53 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2db04283121ca74495c2ee000fb4243, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1272211761
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000011864058216, guid: a61fbf52f79ff5b479d7c59ec56dd0bc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.246
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011864058216, guid: a61fbf52f79ff5b479d7c59ec56dd0bc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011864058216, guid: a61fbf52f79ff5b479d7c59ec56dd0bc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 2.807
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011864058216, guid: a61fbf52f79ff5b479d7c59ec56dd0bc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011864058216, guid: a61fbf52f79ff5b479d7c59ec56dd0bc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011864058216, guid: a61fbf52f79ff5b479d7c59ec56dd0bc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011864058216, guid: a61fbf52f79ff5b479d7c59ec56dd0bc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011864058216, guid: a61fbf52f79ff5b479d7c59ec56dd0bc, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013369595812, guid: a61fbf52f79ff5b479d7c59ec56dd0bc,
+        type: 2}
+      propertyPath: OnUpdateEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1123851722}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a61fbf52f79ff5b479d7c59ec56dd0bc, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1354551286
 Prefab:
@@ -1022,11 +1069,17 @@ Prefab:
     - target: {fileID: 20000013304850028, guid: d379ed0a5618c9f479f58bd83a2d0ad3,
         type: 2}
       propertyPath: m_ClearFlags
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d379ed0a5618c9f479f58bd83a2d0ad3, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1388147051 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000013369595812, guid: a61fbf52f79ff5b479d7c59ec56dd0bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1272211761}
+  m_Script: {fileID: 11500000, guid: 392cd52bd046762438d9555ced3fda94, type: 3}
 --- !u!1 &1519431829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,7 +1156,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1123851722}
+      - m_Target: {fileID: 1123851723}
         m_MethodName: OnToggle
         m_Mode: 1
         m_Arguments:
@@ -1225,7 +1278,7 @@ Transform:
   - {fileID: 676989586}
   - {fileID: 213518561}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2053442525
 GameObject:
