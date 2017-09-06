@@ -12,7 +12,7 @@ public class NavigationHandler : MonoBehaviour, INavigationHandler {
 
     private void Awake()
     {
-        IsActive = false;
+        IsActive = true;
     }
     public void OnNavigationStarted(NavigationEventData eventData)
     {

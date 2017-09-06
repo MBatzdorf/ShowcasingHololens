@@ -18,7 +18,7 @@ public class SpeechHandler : MonoBehaviour{
 
     private void ResetGestureHandler()
     {
-        OnActivateNavigation();
+		OnActivateNavigation();
     }
 
     public void OnActivateNavigation()
