@@ -3,49 +3,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using HoloToolkit.Examples.InteractiveElements;
 
-public class ManipulationHandler : MonoBehaviour, IManipulationHandler {
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License. See LICENSE in the project root for license information.
+// based on GestureControlTest script
+
+
+public class ManipulationHandler : GestureInteractiveControl {
 
     public bool IsActive { get; set; }
-    private Vector3 previousPosition;
 
-    private void Awake()
+
+
+    public GameObject Object;
+    public Interactive InteractiveElement;
+    public float FeebackVisualDistance = 0.95f;
+        
+    private bool mHasGaze = false;
+
+
+
+    private void Start()
     {
         IsActive = false;
     }
 
-    public void OnManipulationCanceled(ManipulationEventData eventData)
-    {
-        return;
-    }
-
-    public void OnManipulationCompleted(ManipulationEventData eventData)
-    {
-        return;
-    }
-
-    public void OnManipulationStarted(ManipulationEventData eventData)
+    /// <summary>
+    /// provide visual feedback based on state and update element position
+    /// </summary>
+    /// <param name="startVector"></param>
+    /// <param name="currentVector"></param>
+    /// <param name="startOrigin"></param>
+    /// <param name="startRay"></param>
+    /// <param name="gestureState"></param>
+    public override void ManipulationUpdate(Vector3 startVector, Vector3 currentVector, Vector3 startOrigin, Vector3 startRay, GestureInteractive.GestureManipulationState gestureState)
     {
         if (IsActive)
         {
-            previousPosition = eventData.CumulativeDelta;
-        }
-        return;
-    }
+            base.ManipulationUpdate(startVector, currentVector, startOrigin, startRay, gestureState);
 
-    public void OnManipulationUpdated(ManipulationEventData eventData)
-    {
-        if (IsActive)
-        {
-            Vector3 movementVector = new Vector3(0, 0, 0);
-            Vector3 currentPosition = eventData.CumulativeDelta;
-            movementVector = currentPosition - previousPosition;
-            previousPosition = currentPosition;
-            transform.position += movementVector;
+            Vector3 mDirection = DirectionVector.normalized;
+
+            Object.transform.localPosition = mDirection * FeebackVisualDistance * CurrentPercentage;
         }
-        return;
         
     }
-
-
 }

@@ -20,7 +20,12 @@ public class ObjectScaler : MonoBehaviour {
 	public void OnChangeScale()
     {
         Vector3 newScale = processSliderValue(slider.SliderValue);
+        float newScaleLength = newScale.magnitude;
+       
         objectScale.transform.localScale = newScale;
+        /*float newXPos = objectScale.position.x - newScaleLength;
+        Vector3 newPosition = new Vector3(newXPos, objectScale.position.y, objectScale.position.z);
+        objectScale.position = newPosition;*/
     }
 
     private Vector3 processSliderValue(float sliderValue)
