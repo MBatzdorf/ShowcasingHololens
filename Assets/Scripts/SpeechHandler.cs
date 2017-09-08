@@ -8,7 +8,7 @@ public class SpeechHandler : MonoBehaviour{
     private NavigationHandler navigationHandler;*/
     private ToggleManipulationType toggleManipulationType;
 
-    private void Awake()
+    private void Start()
     {
         /*manipulationHandler = GetComponent<ManipulationHandler>();
         navigationHandler = GetComponent<NavigationHandler>();*/

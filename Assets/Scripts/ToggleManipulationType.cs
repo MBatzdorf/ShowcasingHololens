@@ -13,10 +13,14 @@ public class ToggleManipulationType : MonoBehaviour {
 
     private bool isNavigationActive = false;
 
-    private void Awake()
+    private void Start()
     {
         manipulationHandler = GetComponent<ManipulationHandler>();
         navigationHandler = GetComponent<NavigationHandler>();
+        if(manipulationHandler == null || navigationHandler == null)
+        {
+            Debug.LogError("ManipulationHandler || NavigationHandler is null in ToggleManipulationType!");
+        }
         SetDefaultHandler();
     }
 

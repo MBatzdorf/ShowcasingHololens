@@ -10,7 +10,7 @@ public class NavigationHandler : MonoBehaviour, INavigationHandler {
     public bool IsActive { get; set; }
     public float RotationSensitivity = 3.0f;
 
-    private void Awake()
+    private void Start()
     {
         IsActive = true;
     }

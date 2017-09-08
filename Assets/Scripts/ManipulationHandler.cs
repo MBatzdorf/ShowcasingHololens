@@ -19,14 +19,13 @@ public class ManipulationHandler : GestureInteractiveControl {
     public GameObject Object;
     public Interactive InteractiveElement;
     public float FeebackVisualDistance = 0.95f;
-        
-    private bool mHasGaze = false;
-
 
 
     private void Start()
     {
+        Debug.Log("ManipulationHandler start!");
         IsActive = false;
+        Debug.Log("ManipuliationHandler " + IsActive);
     }
 
     /// <summary>
