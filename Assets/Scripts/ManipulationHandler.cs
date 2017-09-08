@@ -46,6 +46,8 @@ public class ManipulationHandler : GestureInteractiveControl {
             Vector3 mDirection = DirectionVector.normalized;
 
             Object.transform.localPosition = mDirection * FeebackVisualDistance * CurrentPercentage;
+            Debug.Log("Object position: " + Object.transform.localPosition);
+            //base.StartGesturePosition = Object.transform.localPosition;
         }
         
     }

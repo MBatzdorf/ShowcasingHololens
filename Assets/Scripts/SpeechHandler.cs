@@ -13,7 +13,7 @@ public class SpeechHandler : MonoBehaviour{
         /*manipulationHandler = GetComponent<ManipulationHandler>();
         navigationHandler = GetComponent<NavigationHandler>();*/
         toggleManipulationType = GetComponent<ToggleManipulationType>();
-        ResetGestureHandler();
+        //ResetGestureHandler();
     }
 
     private void ResetGestureHandler()
