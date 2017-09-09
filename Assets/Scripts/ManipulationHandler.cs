@@ -21,8 +21,9 @@ public class ManipulationHandler : GestureInteractiveControl {
     public float FeebackVisualDistance = 0.95f;
         
     private bool mHasGaze = false;
-
-
+    //private Vector3 currentPosition;
+    private Vector3 latestObjectPosition;
+    private bool isDragging = false;
 
     private void Start()
     {
@@ -41,14 +42,44 @@ public class ManipulationHandler : GestureInteractiveControl {
     {
         if (IsActive)
         {
+            //Debug.Log("StartVec: " + startVector + " CurrVec: " + currentVector + " StartOrigin: " + startOrigin);
             base.ManipulationUpdate(startVector, currentVector, startOrigin, startRay, gestureState);
+            
+            //Vector3 mDirection = DirectionVector.normalized;
+            /*if (isDragging)
+            {
+            } else
+            {
 
-            Vector3 mDirection = DirectionVector.normalized;
-
-            Object.transform.localPosition = mDirection * FeebackVisualDistance * CurrentPercentage;
-            Debug.Log("Object position: " + Object.transform.localPosition);
+            }*/
+            Vector3 mCurrPos = DirectionVector.normalized;
+            if(mCurrPos == Vector3.zero && latestObjectPosition != null)
+            {
+                mCurrPos = latestObjectPosition;
+                Debug.LogError("Latest CURRPOS: " + mCurrPos);
+            }
+            Debug.Log("Direction vec: " + mCurrPos);
+            Object.transform.localPosition = mCurrPos * FeebackVisualDistance;
+            latestObjectPosition = Object.transform.localPosition;
+            //Object.transform.localPosition = CurrentGesturePosition * FeebackVisualDistance;
+            Debug.Log("Latest Object position: " + latestObjectPosition);
             //base.StartGesturePosition = Object.transform.localPosition;
         }
         
     }
+
+    public void OnSelect()
+    {
+
+        if (latestObjectPosition != null)
+        {
+            Debug.LogError("ON SELECT");
+            //currentPosition = latestObjectPosition;
+            StartGesturePosition = latestObjectPosition;
+            UpdateGesture();
+            Debug.LogError("StartGesturePos " + latestObjectPosition);
+        }
+    }
+
+
 }

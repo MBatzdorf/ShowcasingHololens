@@ -8,14 +8,14 @@ public class ToggleManipulationType : MonoBehaviour {
 
     public Text buttonText;
 
-    private ManipulationHandler manipulationHandler;
+    private MovementHandler movementHandler;
     private NavigationHandler navigationHandler;
 
     private bool isNavigationActive = false;
 
     private void Awake()
     {
-        manipulationHandler = GetComponent<ManipulationHandler>();
+        movementHandler = GetComponent<MovementHandler>();
         navigationHandler = GetComponent<NavigationHandler>();
         SetDefaultHandler();
     }
@@ -29,7 +29,7 @@ public class ToggleManipulationType : MonoBehaviour {
     {
         Debug.Log("On activate navigation in toggle script");
         isNavigationActive = true;
-        manipulationHandler.IsActive = false;
+        movementHandler.IsActive = false;
         navigationHandler.IsActive = true;
     }
 
@@ -37,7 +37,7 @@ public class ToggleManipulationType : MonoBehaviour {
     {
         Debug.Log("On activate manipulation in toggle script");
         isNavigationActive = false;
-        manipulationHandler.IsActive = true;
+        movementHandler.IsActive = true;
         navigationHandler.IsActive = false;
     }
 
