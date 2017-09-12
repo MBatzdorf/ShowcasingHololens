@@ -41,8 +41,6 @@ public class ObjectSpawnButton : MonoBehaviour {
 			interactableObject.transform.localScale = tmpScale;
 			interactableObject.GetComponentInChildren<Renderer> ().enabled = true;
 			interactableObject.GetComponentInChildren<Collider> ().enabled = true;
-
-			Debug.Log ("Button " + objectName.text + " clicked.");
 		}
 	}
 }

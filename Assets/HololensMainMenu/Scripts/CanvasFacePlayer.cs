@@ -4,7 +4,7 @@ using UnityEngine;
 
 // Taken from http://answers.unity3d.com/questions/132592/lookat-in-opposite-direction.html
 
-public class HololensCanvas : MonoBehaviour {
+public class CanvasFacePlayer : MonoBehaviour {
 
 	private Transform camera;
 

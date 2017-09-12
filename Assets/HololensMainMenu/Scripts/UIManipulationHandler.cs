@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using HoloToolkit.Examples.InteractiveElements;
 
 public class UIManipulationHandler : MonoBehaviour, IInputClickHandler {
 
@@ -23,7 +24,7 @@ public class UIManipulationHandler : MonoBehaviour, IInputClickHandler {
 		}
 		else
 		{
-		canvas.SetParent (camera.transform);
+			canvas.SetParent (camera.transform);
 		}
 	}
 }

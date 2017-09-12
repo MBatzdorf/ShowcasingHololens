@@ -507,18 +507,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114024405107931502}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1338900969011834}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114059651576378556
@@ -839,7 +828,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1143546969989586}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 831e1dcf4d8357a4890bf18d69b9f513, type: 3}
+  m_Script: {fileID: 11500000, guid: c8986f604cb79b04188e163198a33a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114399322776305804
@@ -1074,7 +1063,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1338900969011834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b377b5b5525f840a0cd3eec703e1ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 52f9c496d60db5240aef9646f317099a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 224950061089985512}
@@ -1181,11 +1170,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1696526063701714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94864b70f4b93174089806e00509b430, type: 3}
+  m_Script: {fileID: 11500000, guid: d178aab26c9021e44adf04e47b4feba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   contentPanel: {fileID: 224417901020018274}
-  buttonPrefab: {fileID: 1719316767990792, guid: 4792478938218854fa446737b64af2f4,
+  buttonPrefab: {fileID: 1719316767990792, guid: 5b9845d9bc11f7348b4088477474a6f3,
     type: 2}
   resetButton: {fileID: 114557006921938966}
 --- !u!114 &114764255412263366
@@ -2060,7 +2049,7 @@ RectTransform:
   m_GameObject: {fileID: 1143546969989586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
+  m_LocalScale: {x: 0.030000003, y: 0.029999997, z: 0.030000007}
   m_Children:
   - {fileID: 224140285224876558}
   m_Father: {fileID: 0}
