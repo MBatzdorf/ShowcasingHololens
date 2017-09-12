@@ -6,56 +6,52 @@ using UnityEngine.UI;
 
 public class ToggleManipulationType : MonoBehaviour {
 
-    public Text buttonText;
+	public Text buttonText;
 
-    private ManipulationHandler manipulationHandler;
-    private NavigationHandler navigationHandler;
+	private MovementHandler movementHandler;
+	private NavigationHandler navigationHandler;
 
-    private bool isNavigationActive = false;
+	private bool isNavigationActive = false;
 
-    private void Start()
-    {
-        manipulationHandler = GetComponent<ManipulationHandler>();
-        navigationHandler = GetComponent<NavigationHandler>();
-        if(manipulationHandler == null || navigationHandler == null)
-        {
-            Debug.LogError("ManipulationHandler || NavigationHandler is null in ToggleManipulationType!");
-        }
-        SetDefaultHandler();
-    }
+	private void Awake()
+	{
+		movementHandler = GetComponent<MovementHandler>();
+		navigationHandler = GetComponent<NavigationHandler>();
+		SetDefaultHandler();
+	}
 
-    private void SetDefaultHandler()
-    {
-        OnActivateNavigationHandler();
-    }
+	private void SetDefaultHandler()
+	{
+		OnActivateNavigationHandler();
+	}
 
-    public void OnActivateNavigationHandler()
-    {
-        Debug.Log("On activate navigation in toggle script");
-        isNavigationActive = true;
-        manipulationHandler.IsActive = false;
-        navigationHandler.IsActive = true;
-    }
+	public void OnActivateNavigationHandler()
+	{
+		Debug.Log("On activate navigation in toggle script");
+		isNavigationActive = true;
+		movementHandler.IsActive = false;
+		navigationHandler.IsActive = true;
+	}
 
-    public void OnActivateManipulationHandler()
-    {
-        Debug.Log("On activate manipulation in toggle script");
-        isNavigationActive = false;
-        manipulationHandler.IsActive = true;
-        navigationHandler.IsActive = false;
-    }
+	public void OnActivateManipulationHandler()
+	{
+		Debug.Log("On activate manipulation in toggle script");
+		isNavigationActive = false;
+		movementHandler.IsActive = true;
+		navigationHandler.IsActive = false;
+	}
 
-    public void OnToggle()
-    {
-        if (isNavigationActive)
-        {
-            buttonText.text = "Activate Navigation";
-            OnActivateManipulationHandler();
-        }
-        else
-        {
-            buttonText.text = "Activate Manipulation";
-            OnActivateNavigationHandler();
-        }
-    }
+	public void OnToggle()
+	{
+		if (isNavigationActive)
+		{
+			buttonText.text = "Activate Navigation";
+			OnActivateManipulationHandler();
+		}
+		else
+		{
+			buttonText.text = "Activate Manipulation";
+			OnActivateNavigationHandler();
+		}
+	}
 }
