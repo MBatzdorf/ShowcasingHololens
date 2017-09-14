@@ -14,6 +14,11 @@ public class MovementHandler : MonoBehaviour, IManipulationHandler {
 
     private Vector3 previousPosition;
 
+    private void Awake()
+    {
+        IsActive = false;
+    }
+
     void Start()
     {
         InputManager.Instance.AddGlobalListener(currentObject);
