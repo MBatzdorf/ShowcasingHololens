@@ -36,7 +36,7 @@ public class MovementHandler : MonoBehaviour, IManipulationHandler {
 
     public void OnManipulationStarted(ManipulationEventData eventData)
     {
-        previousPosition = eventData.CumulativeDelta;
+        return;
     }
 
     public void OnManipulationUpdated(ManipulationEventData eventData)

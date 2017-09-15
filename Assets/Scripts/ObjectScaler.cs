@@ -4,8 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using HoloToolkit.Unity.InputModule;
 
-public class ObjectScaler : MonoBehaviour {
+public class ObjectScaler : MonoBehaviour, IManipulationHandler {
 
     public SliderGestureControl slider;
 
@@ -33,4 +34,19 @@ public class ObjectScaler : MonoBehaviour {
         float newScaleValue = sliderValue + SliderOffset;
         return new Vector3(newScaleValue, newScaleValue, newScaleValue);
     }
+
+    public void OnManipulationStarted(ManipulationEventData eventData)
+    {}
+
+    public void OnManipulationUpdated(ManipulationEventData eventData)
+    {
+        Vector3 manipulationData = eventData.CumulativeDelta;
+        transform.localScale *= 1.0f - manipulationData.z;
+    }
+
+    public void OnManipulationCompleted(ManipulationEventData eventData)
+    {}
+
+    public void OnManipulationCanceled(ManipulationEventData eventData)
+    {}
 }

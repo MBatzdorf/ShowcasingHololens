@@ -8,50 +8,83 @@ public class ToggleManipulationType : MonoBehaviour {
 
     public Text buttonText;
 
-    private MovementHandler movementHandler;
-    private NavigationHandler navigationHandler;
-
     private bool isNavigationActive = false;
 
-    private void Awake()
+    private void Start()
     {
-        movementHandler = GetComponent<MovementHandler>();
-        navigationHandler = GetComponent<NavigationHandler>();
-        SetDefaultHandler();
     }
 
-    private void SetDefaultHandler()
+    public void SetDefaultHandler()
     {
-        OnActivateNavigationHandler();
+        OnRotate();
     }
 
-    public void OnActivateNavigationHandler()
+    public void OnRotate()
     {
         Debug.Log("On activate navigation in toggle script");
+        ChangeManipulationType(ManipulationMode.ROTATION);
         isNavigationActive = true;
-        movementHandler.IsActive = false;
-        navigationHandler.IsActive = true;
     }
 
-    public void OnActivateManipulationHandler()
+    private void ChangeManipulationType(ManipulationMode manipulationMode)
+    {
+        SpatialManipulator spatialManipulator = GetManipulator();
+        if (spatialManipulator == null)
+        {
+            return;
+        }
+        if (spatialManipulator.Mode != manipulationMode)
+        {
+            spatialManipulator.Mode = manipulationMode;
+            Debug.Log("NEW manipulation mode: " + spatialManipulator.Mode);
+
+        }
+    }
+
+    private SpatialManipulator GetManipulator()
+    {
+        var lastSelectedObject = ObjectStateManager.Instance.SelectedObject;
+        if (lastSelectedObject == null)
+        {
+            Debug.Log("No selected element found");
+            return null;
+        }
+        var manipulator = lastSelectedObject.GetComponent<SpatialManipulator>();
+        if (manipulator == null)
+        {
+            manipulator = lastSelectedObject.GetComponentInChildren<SpatialManipulator>();
+        }
+
+        if (manipulator == null)
+        {
+            Debug.Log("No manipulator component found");
+        }
+        return manipulator;
+    }
+
+    public void OnMove()
     {
         Debug.Log("On activate manipulation in toggle script");
+        ChangeManipulationType(ManipulationMode.MOVEMENT);
         isNavigationActive = false;
-        movementHandler.IsActive = true;
-        navigationHandler.IsActive = false;
+    }
+
+    public void OnScale()
+    {
+        ChangeManipulationType(ManipulationMode.SCALING);
     }
 
     public void OnToggle()
     {
         if (isNavigationActive)
         {
-            buttonText.text = "Activate Navigation";
-            OnActivateManipulationHandler();
+            buttonText.text = "Activate Rotation";
+            OnMove();
         }
         else
         {
-            buttonText.text = "Activate Manipulation";
-            OnActivateNavigationHandler();
+            buttonText.text = "Activate Movement";
+            OnRotate();
         }
     }
 }

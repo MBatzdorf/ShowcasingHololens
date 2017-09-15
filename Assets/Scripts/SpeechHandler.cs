@@ -24,7 +24,7 @@ public class SpeechHandler : MonoBehaviour{
     public void OnActivateNavigation()
     {
         Debug.Log("On activate navigation");
-        toggleManipulationType.OnActivateNavigationHandler();
+        toggleManipulationType.OnRotate();
         /*manipulationHandler.IsActive = false;
         navigationHandler.IsActive = true;*/
     }
@@ -32,7 +32,7 @@ public class SpeechHandler : MonoBehaviour{
     public void OnActivateManipulation()
     {
         Debug.Log("On activate manipulation");
-        toggleManipulationType.OnActivateManipulationHandler();
+        toggleManipulationType.OnMove();
         /*manipulationHandler.IsActive = true;
         navigationHandler.IsActive = false;*/
     }
