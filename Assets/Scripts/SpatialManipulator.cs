@@ -46,7 +46,7 @@ public class SpatialManipulator : MonoBehaviour
     {
         float rotationFactorX = manipulationData.y * rotationSensitivity;
         float rotationFactorY = manipulationData.x * rotationSensitivity;
-        this.transform.Rotate(new Vector3(rotationFactorX, -1 * rotationFactorY, 0));
+        this.transform.Rotate(new Vector3(-1* rotationFactorX, -1 * rotationFactorY, 0));
     }
 
     private void Move(Vector3 manipulationData)
