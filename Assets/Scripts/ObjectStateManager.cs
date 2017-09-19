@@ -20,7 +20,11 @@ public class ObjectStateManager : Singleton<ObjectStateManager>, IManipulationHa
             {
                 ResetDeselectedObject(mSelectedObject);
                 mSelectedObject = value;
-                SetDefaultManipulationType();
+                Debug.Log("SELECTED OBJECT: " + mSelectedObject);
+                if(mSelectedObject != null)
+                {
+                    SetDefaultManipulationType();
+                }
             }
         }
 
@@ -31,6 +35,31 @@ public class ObjectStateManager : Singleton<ObjectStateManager>, IManipulationHa
     {
         InputManager.Instance.AddGlobalListener(gameObject);
     }
+
+    public void OnManipulationUpdated(ManipulationEventData eventData)
+    {
+        if(mSelectedObject != null)
+        {
+            SpatialManipulator spatialManipulator = GetManipulator(SelectedObject);
+            if (spatialManipulator != null)
+            {
+                spatialManipulator.Manipulate(eventData.CumulativeDelta, ManipulationDataType.MANIPULATION_DATA);
+            }
+        }
+    }
+
+    public void OnNavigationUpdated(NavigationEventData eventData)
+    {
+        if (mSelectedObject != null)
+        {
+            SpatialManipulator spatialManipulator = GetManipulator(SelectedObject);
+            if (spatialManipulator != null)
+            {
+                spatialManipulator.Manipulate(eventData.CumulativeDelta, ManipulationDataType.NAVIGATION_DATA);
+            }
+        }
+    }
+
 
     private void SetDefaultManipulationType()
     {
@@ -52,24 +81,11 @@ public class ObjectStateManager : Singleton<ObjectStateManager>, IManipulationHa
         }
     }
 
-    public void OnManipulationUpdated(ManipulationEventData eventData)
-    {
-        SpatialManipulator spatialManipulator = GetManipulator(SelectedObject);
-        spatialManipulator.Manipulate(eventData.CumulativeDelta, ManipulationDataType.MANIPULATION_DATA);
-    }
-
     private SpatialManipulator GetManipulator(GameObject selectedObject)
     {
-        if(selectedObject == null) { return null; }
+        if (selectedObject == null) { return null; }
         SpatialManipulator spatialManipulator = selectedObject.GetComponent<SpatialManipulator>();
         return spatialManipulator;
-    }
-    
-    public void OnNavigationUpdated(NavigationEventData eventData)
-    {
-        Debug.Log("IN NAVIGATION UPDATE!");
-        SpatialManipulator spatialManipulator = GetManipulator(SelectedObject);
-        spatialManipulator.Manipulate(eventData.CumulativeDelta, ManipulationDataType.NAVIGATION_DATA);
     }
 
     public void OnNavigationCanceled(NavigationEventData eventData)

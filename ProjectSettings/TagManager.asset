@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TagAlong
   - InteractableObject
+  - UI
   layers:
   - Default
   - TransparentFX

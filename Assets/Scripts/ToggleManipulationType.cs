@@ -16,9 +16,19 @@ public class ToggleManipulationType : MonoBehaviour {
         OnRotate();
     }
 
+    public void OnMove()
+    {
+        ChangeManipulationType(ManipulationMode.MOVEMENT);
+    }
+        
     public void OnRotate()
     {
         ChangeManipulationType(ManipulationMode.ROTATION);
+    }
+
+    public void OnScale()
+    {
+        ChangeManipulationType(ManipulationMode.SCALING);
     }
 
     private void ChangeManipulationType(ManipulationMode manipulationMode)
@@ -56,15 +66,4 @@ public class ToggleManipulationType : MonoBehaviour {
         }
         return manipulator;
     }
-
-    public void OnMove()
-    {
-        ChangeManipulationType(ManipulationMode.MOVEMENT);
-    }
-
-    public void OnScale()
-    {
-        ChangeManipulationType(ManipulationMode.SCALING);
-    }
-
 }
