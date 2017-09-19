@@ -26,7 +26,6 @@ public class ObjectStateManager : Singleton<ObjectStateManager>, IManipulationHa
 
     }
 
-
     // Use this for initialization
     void Start()
     {

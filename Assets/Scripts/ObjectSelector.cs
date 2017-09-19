@@ -7,7 +7,13 @@ using System;
 public class ObjectSelector : MonoBehaviour, IInputClickHandler {
     public void OnInputClicked(InputClickedEventData eventData)
     {
-        Debug.Log("Selected Object " + gameObject.name);
-        ObjectStateManager.Instance.SelectedObject = gameObject;
+        /*if (ObjectStateManager.Instance.SelectedObject != gameObject)
+        {*/
+            ObjectStateManager.Instance.SelectedObject = gameObject;
+        /*}
+        else
+        {
+            ObjectStateManager.Instance.SelectedObject = null;
+        }*/
     }
 }

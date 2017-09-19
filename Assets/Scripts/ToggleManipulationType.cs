@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class ToggleManipulationType : MonoBehaviour {
 
-    //public Text buttonText;
-
-    //private bool isNavigationActive = false;
 
     private void Start()
     {
@@ -21,9 +18,7 @@ public class ToggleManipulationType : MonoBehaviour {
 
     public void OnRotate()
     {
-        Debug.Log("On activate navigation in toggle script");
         ChangeManipulationType(ManipulationMode.ROTATION);
-        //isNavigationActive = true;
     }
 
     private void ChangeManipulationType(ManipulationMode manipulationMode)
@@ -64,9 +59,7 @@ public class ToggleManipulationType : MonoBehaviour {
 
     public void OnMove()
     {
-        Debug.Log("On activate manipulation in toggle script");
         ChangeManipulationType(ManipulationMode.MOVEMENT);
-        //isNavigationActive = false;
     }
 
     public void OnScale()
@@ -74,17 +67,4 @@ public class ToggleManipulationType : MonoBehaviour {
         ChangeManipulationType(ManipulationMode.SCALING);
     }
 
-    /*public void OnToggle()
-    {
-        if (isNavigationActive)
-        {
-            buttonText.text = "Activate Rotation";
-            OnMove();
-        }
-        else
-        {
-            buttonText.text = "Activate Movement";
-            OnRotate();
-        }
-    }*/
 }

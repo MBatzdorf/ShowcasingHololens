@@ -19,19 +19,15 @@ public class SpatialManipulator : MonoBehaviour
         switch (Mode)
         {
             case ManipulationMode.MOVEMENT:
-                Debug.Log("MMMOOOOVVVEEE");
                 Move(manipulationData);
                 break;
             case ManipulationMode.ROTATION:
-                Debug.Log("RRRRROOOOOOOOOTTTTTTAAAAAAATTTTTTTEEEE 111111");
                 if (dataType == ManipulationDataType.NAVIGATION_DATA)
                 {
-                    Debug.Log("RRRRROOOOOOOOOTTTTTTAAAAAAATTTTTTTEEEE 22222");
                     Rotate(manipulationData);
                 }
                 break;
             case ManipulationMode.SCALING:
-                Debug.Log("SSSCCCAAAALLLEEE!");
                 Scale(manipulationData);
                 break;
         }
@@ -46,7 +42,7 @@ public class SpatialManipulator : MonoBehaviour
     {
         float rotationFactorX = manipulationData.y * rotationSensitivity;
         float rotationFactorY = manipulationData.x * rotationSensitivity;
-        this.transform.Rotate(new Vector3(-1* rotationFactorX, -1 * rotationFactorY, 0));
+        this.transform.Rotate(new Vector3(rotationFactorX, -1 * rotationFactorY, 0));
     }
 
     private void Move(Vector3 manipulationData)
