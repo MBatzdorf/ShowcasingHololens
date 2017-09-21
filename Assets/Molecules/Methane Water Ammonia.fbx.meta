@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: 98763a0007e1a594bb07ffe5b6c6a104
+timeCreated: 1505983118
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: bond
+    100002: bond.001
+    100004: bond.002
+    100006: bond.003
+    100008: bond.004
+    100010: bond.005
+    100012: bond.006
+    100014: bond.007
+    100016: bond.008
+    100018: Camera
+    100020: hydrogen
+    100022: hydrogen.001
+    100024: hydrogen.002
+    100026: hydrogen.003
+    100028: hydrogen.004
+    100030: hydrogen.005
+    100032: hydrogen.006
+    100034: hydrogen.007
+    100036: hydrogen.008
+    100038: Lamp
+    100040: //RootNode
+    100042: Nitrogen
+    100044: Oxygen
+    100046: Sphere
+    400000: bond
+    400002: bond.001
+    400004: bond.002
+    400006: bond.003
+    400008: bond.004
+    400010: bond.005
+    400012: bond.006
+    400014: bond.007
+    400016: bond.008
+    400018: Camera
+    400020: hydrogen
+    400022: hydrogen.001
+    400024: hydrogen.002
+    400026: hydrogen.003
+    400028: hydrogen.004
+    400030: hydrogen.005
+    400032: hydrogen.006
+    400034: hydrogen.007
+    400036: hydrogen.008
+    400038: Lamp
+    400040: //RootNode
+    400042: Nitrogen
+    400044: Oxygen
+    400046: Sphere
+    2000000: Camera
+    2300000: bond
+    2300002: bond.001
+    2300004: bond.002
+    2300006: bond.003
+    2300008: bond.004
+    2300010: bond.005
+    2300012: bond.006
+    2300014: bond.007
+    2300016: bond.008
+    2300018: hydrogen
+    2300020: hydrogen.001
+    2300022: hydrogen.002
+    2300024: hydrogen.003
+    2300026: hydrogen.004
+    2300028: hydrogen.005
+    2300030: hydrogen.006
+    2300032: hydrogen.007
+    2300034: hydrogen.008
+    2300036: Nitrogen
+    2300038: Oxygen
+    2300040: Sphere
+    3300000: bond
+    3300002: bond.001
+    3300004: bond.002
+    3300006: bond.003
+    3300008: bond.004
+    3300010: bond.005
+    3300012: bond.006
+    3300014: bond.007
+    3300016: bond.008
+    3300018: hydrogen
+    3300020: hydrogen.001
+    3300022: hydrogen.002
+    3300024: hydrogen.003
+    3300026: hydrogen.004
+    3300028: hydrogen.005
+    3300030: hydrogen.006
+    3300032: hydrogen.007
+    3300034: hydrogen.008
+    3300036: Nitrogen
+    3300038: Oxygen
+    3300040: Sphere
+    4300000: bond.008
+    4300002: hydrogen.008
+    4300004: bond.007
+    4300006: hydrogen.007
+    4300008: bond.006
+    4300010: hydrogen.006
+    4300012: Nitrogen
+    4300014: Oxygen
+    4300016: bond.005
+    4300018: hydrogen.005
+    4300020: bond.004
+    4300022: hydrogen.004
+    4300024: Sphere
+    4300026: bond.003
+    4300028: hydrogen.003
+    4300030: bond.002
+    4300032: hydrogen.002
+    4300034: bond.001
+    4300036: hydrogen.001
+    4300038: bond
+    4300040: hydrogen
+    10800000: Lamp
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
