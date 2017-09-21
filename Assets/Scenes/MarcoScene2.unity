@@ -630,6 +630,10 @@ Prefab:
       propertyPath: m_Name
       value: ARCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
   m_IsPrefabParent: 0
@@ -975,6 +979,10 @@ Prefab:
     - target: {fileID: 224067273889282386, guid: c7832f2a3dfa1a844ae61a99512af08f,
         type: 2}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1201571360221890, guid: c7832f2a3dfa1a844ae61a99512af08f, type: 2}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
