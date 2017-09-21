@@ -37,10 +37,17 @@ public class UIManipulationHandler : MonoBehaviour, IPointerUpHandler, IPointerD
 
 	public void OnManipulationUpdated(ManipulationEventData eventData)
 	{
-		Vector3 manipulationData = eventData.CumulativeDelta;
-		Vector3 directionVector = manipulationData * movementSpeed;
-		currentObject.transform.position += directionVector;
-		Debug.Log ("Position updated");
+        if (gameObject == ObjectStateManager.Instance.SelectedObject)
+        {
+            Vector3 manipulationData = eventData.CumulativeDelta;
+            Vector3 directionVector = manipulationData * movementSpeed;
+            currentObject.transform.position += directionVector;
+            Debug.Log("Position updated");
+        }
+        else
+        {
+            return;
+        }
 	}
 
 
