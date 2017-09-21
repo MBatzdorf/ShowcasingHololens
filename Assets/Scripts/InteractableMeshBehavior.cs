@@ -41,6 +41,16 @@ public class InteractableMeshBehavior : MonoBehaviour {
 		StartCoroutine("FadeInInternal");
 	}
 
+	public void PlayAnimation()
+	{
+		Animator anim = GetComponentInChildren<Animator> ();
+
+		if (anim != null) {
+			if(anim.runtimeAnimatorController.animationClips.Length > 1)
+				anim.Play ("Run");
+		}
+	}
+
 	void OnBecameVisible()
 	{
 		collider.enabled = true;
