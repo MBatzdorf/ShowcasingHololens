@@ -113,13 +113,14 @@ GameObject:
   - component: {fileID: 114009385147356486}
   - component: {fileID: 114621262511181314}
   - component: {fileID: 114266834108692206}
+  - component: {fileID: 114282809933168946}
   m_Layer: 5
   m_Name: ContextMenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1633323043002646
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +731,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc8fabb67b9475f41b77475d818c6dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114282809933168946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592552906657146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb39f37f6d68783439236943a96d8d13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  associatedObject: {fileID: 1854956898994736}
 --- !u!114 &114294031822252574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -942,6 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 114374082982657072}
   manipulationToggler: {fileID: 114182866842090454}
+  manipulator: {fileID: 114157277862279248}
   manipulateButtonImage: {fileID: 114260794830071602}
   rotateImage: {fileID: 21300000, guid: 740d971a8a462474280b2944537d91bb, type: 3}
   scaleImage: {fileID: 21300000, guid: 51009e62bd624ff40898e05b082ad0f0, type: 3}
