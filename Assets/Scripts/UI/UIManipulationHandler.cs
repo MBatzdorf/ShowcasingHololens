@@ -53,12 +53,14 @@ public class UIManipulationHandler : MonoBehaviour, IPointerUpHandler, IPointerD
 
 	public void OnPointerDown(PointerEventData eventData)
 	{
+		return;
 		currentObject.transform.SetParent (cameraTransform);
 		Debug.Log ("Mouse down");
 	}
 
 	public void OnPointerUp(PointerEventData eventData)
 	{
+		return;
 		Vector3 tempTransform = currentObject.transform.position;
 		currentObject.transform.SetParent (null);
 		currentObject.transform.position = tempTransform;

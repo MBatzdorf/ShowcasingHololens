@@ -13,7 +13,6 @@ public class InteractableMeshBehavior : MonoBehaviour {
 	private Material[] originalMaterials;
 	private Renderer[] rends;
 	private Collider collider;
-	private AudioSource audioSource;
 
 	// Use this for initialization
 	void Start () {
@@ -30,18 +29,15 @@ public class InteractableMeshBehavior : MonoBehaviour {
 		}
 
 		collider = GetComponent<Collider> ();
-		audioSource = GetComponent<AudioSource> ();
 	}
 	
 	public void FadeOut()
 	{
-		audioSource.Play ();
 		StartCoroutine("FadeOutInternal");
 	}
 
 	public void FadeIn()
 	{
-		audioSource.Play ();
 		StartCoroutine("FadeInInternal");
 	}
 

@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 114880877729733442}
   - component: {fileID: 114083325127115540}
   - component: {fileID: 114540447028722134}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: DragButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1836,7 +1836,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1250731007096380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 15.69}
+  m_LocalPosition: {x: 0, y: 0, z: 7.7}
   m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children:
   - {fileID: 224165422862356040}
