@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 222100687525129862}
   - component: {fileID: 114260794830071602}
   - component: {fileID: 114374082982657072}
+  - component: {fileID: 114587107142733728}
   m_Layer: 5
   m_Name: ButtonInteractionType
   m_TagString: Untagged
@@ -118,7 +119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1633323043002646
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,6 +929,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa3ada2e0624c34782f612b617b5056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114587107142733728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300561098335242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d91a8f5ec702c46b4ffddbe3266469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 114374082982657072}
+  manipulationToggler: {fileID: 114182866842090454}
+  manipulateButtonImage: {fileID: 114260794830071602}
+  rotateImage: {fileID: 21300000, guid: 740d971a8a462474280b2944537d91bb, type: 3}
+  scaleImage: {fileID: 21300000, guid: 51009e62bd624ff40898e05b082ad0f0, type: 3}
+  moveImage: {fileID: 21300000, guid: c615a3c558e024e48802ce3fc065a147, type: 3}
 --- !u!114 &114587954827945388
 MonoBehaviour:
   m_ObjectHideFlags: 1
