@@ -45,9 +45,10 @@ public class SpatialManipulator : MonoBehaviour
 
     private void Scale(Vector3 manipulationData)
     {
-        if (transform.localScale.x > minScale.x)
+		Vector3 newScale = transform.localScale * (1.0f - (manipulationData.z * scalingSpeed));
+		if (newScale.x > minScale.x)
         {
-            transform.localScale *= 1.0f - (manipulationData.z * scalingSpeed);
+			transform.localScale = newScale;
         }
     }
 
