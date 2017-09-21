@@ -13,6 +13,7 @@ public class SpatialManipulator : MonoBehaviour
     public float scalingSpeed = 0.2f;
 
     private Vector3 defaultPosition = new Vector3(0, 0.25f, 0);
+    private readonly Vector3 minScale = new Vector3(0.5f, 0.5f, 0.5f);
 
     public ManipulationMode Mode { get; set; }
 
@@ -44,7 +45,10 @@ public class SpatialManipulator : MonoBehaviour
 
     private void Scale(Vector3 manipulationData)
     {
-        transform.localScale *= 1.0f - (manipulationData.z * scalingSpeed);
+        if (transform.localScale.x > minScale.x)
+        {
+            transform.localScale *= 1.0f - (manipulationData.z * scalingSpeed);
+        }
     }
 
     private void Rotate(Vector3 manipulationData)
