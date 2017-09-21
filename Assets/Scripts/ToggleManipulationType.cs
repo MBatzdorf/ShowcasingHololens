@@ -6,52 +6,83 @@ using UnityEngine.UI;
 
 public class ToggleManipulationType : MonoBehaviour {
 
-    public Text buttonText;
 
-    private MovementHandler movementHandler;
-    private NavigationHandler navigationHandler;
-
-    private bool isNavigationActive = false;
-
-    private void Awake()
+    private void Start()
     {
-        movementHandler = GetComponent<MovementHandler>();
-        navigationHandler = GetComponent<NavigationHandler>();
-        SetDefaultHandler();
     }
 
-    private void SetDefaultHandler()
+    public void SetDefaultHandler()
     {
-        OnActivateNavigationHandler();
+        OnRotate();
     }
 
-    public void OnActivateNavigationHandler()
+    public void OnMove()
     {
-        Debug.Log("On activate navigation in toggle script");
-        isNavigationActive = true;
-        movementHandler.IsActive = false;
-        navigationHandler.IsActive = true;
+        ChangeManipulationType(ManipulationMode.MOVEMENT);
+    }
+        
+    public void OnRotate()
+    {
+        ChangeManipulationType(ManipulationMode.ROTATION);
     }
 
-    public void OnActivateManipulationHandler()
+    public void OnScale()
     {
-        Debug.Log("On activate manipulation in toggle script");
-        isNavigationActive = false;
-        movementHandler.IsActive = true;
-        navigationHandler.IsActive = false;
+        ChangeManipulationType(ManipulationMode.SCALING);
     }
 
-    public void OnToggle()
+    public void OnReset()
     {
-        if (isNavigationActive)
+        ChangeManipulationType(ManipulationMode.NONE);
+    }
+
+    private void ChangeManipulationType(ManipulationMode manipulationMode)
+    {
+        if (gameObject == ObjectStateManager.Instance.SelectedObject)
         {
-            buttonText.text = "Activate Navigation";
-            OnActivateManipulationHandler();
+            SpatialManipulator spatialManipulator = GetManipulator();
+            if (spatialManipulator == null)
+            {
+                return;
+            }
+            if (spatialManipulator.Mode != manipulationMode)
+            {
+                if(manipulationMode == ManipulationMode.NONE)
+                {
+                    spatialManipulator.ResetPosition();
+                    return;
+                }
+                spatialManipulator.Mode = manipulationMode;
+                Debug.Log("NEW manipulation mode: " + spatialManipulator.Mode);
+
+            }
         }
         else
         {
-            buttonText.text = "Activate Manipulation";
-            OnActivateNavigationHandler();
+            Debug.Log("This object is currently not selected!");
         }
+    }
+
+    private SpatialManipulator GetManipulator()
+    {
+        //var lastSelectedObject = ObjectStateManager.Instance.SelectedObject;
+        /*if (lastSelectedObject == null)
+        {
+            Debug.Log("No selected element found");
+            return null;
+        }*/
+        //var manipulator = lastSelectedObject.GetComponent<SpatialManipulator>();
+        SpatialManipulator manipulator = GetComponent<SpatialManipulator>();
+        if (manipulator == null)
+        {
+            //manipulator = lastSelectedObject.GetComponentInChildren<SpatialManipulator>();
+            manipulator = GetComponentInChildren<SpatialManipulator>();
+        }
+
+        if (manipulator == null)
+        {
+            Debug.Log("No manipulator component found");
+        }
+        return manipulator;
     }
 }

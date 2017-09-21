@@ -189,15 +189,12 @@ GameObject:
   - component: {fileID: 33079418829295562}
   - component: {fileID: 65404226351584954}
   - component: {fileID: 23342875416304012}
-  - component: {fileID: 114205811508178580}
-  - component: {fileID: 114125490771799364}
-  - component: {fileID: 114180845470369990}
   - component: {fileID: 114922525537831928}
-  - component: {fileID: 114740928220936870}
-  - component: {fileID: 114790674355211362}
   - component: {fileID: 114988661563986862}
-  - component: {fileID: 114893171974701106}
   - component: {fileID: 82739059439065570}
+  - component: {fileID: 114565942301754056}
+  - component: {fileID: 114182866842090454}
+  - component: {fileID: 114157277862279248}
   m_Layer: 9
   m_Name: SetMyMesh
   m_TagString: Untagged
@@ -226,7 +223,7 @@ Transform:
   m_GameObject: {fileID: 1633323043002646}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.247, y: 0.247, z: 0.247}
   m_Children:
   - {fileID: 4359972904696284}
   m_Father: {fileID: 0}
@@ -527,17 +524,6 @@ MonoBehaviour:
     et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
     duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
     Lorem ipsum dolor sit amet.'
---- !u!114 &114125490771799364
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1854956898994736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e8cac8a5b75e1468cb49ec544da5c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114136838688739354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -549,10 +535,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cadfb90286c81fd42a6785e4e7cd3024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: '--- EMPTY ---'
+  mTrackableName: stones
   mPreserveChildSize: 0
   mInitializedInEditor: 1
-  mDataSetPath: QCAR/--- EMPTY ---.xml
+  mDataSetPath: QCAR/StonesAndChips.xml
   mExtendedTracking: 1
   mInitializeSmartTerrain: 0
   mReconstructionToInitialize: {fileID: 0}
@@ -562,10 +548,24 @@ MonoBehaviour:
   mSmartTerrainOccluderOffset: {x: 0, y: 0, z: 0}
   mSmartTerrainOccluderRotation: {x: 0, y: 0, z: 0, w: 0}
   mAutoSetOccluderFromTargetSize: 0
-  mAspectRatio: 1
+  mAspectRatio: 0.70000005
   mImageTargetType: 0
-  mWidth: 1
-  mHeight: 1
+  mWidth: 0.247
+  mHeight: 0.1729
+--- !u!114 &114157277862279248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854956898994736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df92809b485d47440b0a8c9a9d357e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 0.03
+  rotationSensitivity: 2
+  scalingSpeed: 0.03
 --- !u!114 &114160922362788142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -607,7 +607,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114180845470369990
+--- !u!114 &114182866842090454
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -615,10 +615,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1854956898994736}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b0b8241fcc8ecc4a98bf112caebc2e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d7f02d170ea7314ba00a6e6c465a694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contextMenu: {fileID: 1592552906657146}
 --- !u!114 &114199185825955240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -660,18 +659,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114205811508178580
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1854956898994736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 629c6e8ee7e2f9e43a9def324630b67e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RotationSensitivity: 3
 --- !u!114 &114206762996457170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -808,8 +795,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114740928220936870}
-        m_MethodName: OnToggle
+      - m_Target: {fileID: 114182866842090454}
+        m_MethodName: OnMove
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -930,6 +917,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114565942301754056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1854956898994736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caa3ada2e0624c34782f612b617b5056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114587954827945388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1025,18 +1023,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114740928220936870
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1854956898994736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d7f02d170ea7314ba00a6e6c465a694, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonText: {fileID: 114066196367032028}
 --- !u!114 &114777576896657258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1048,31 +1034,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e246bd21db86f8346bc66895a661fcc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114790674355211362
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1854956898994736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ebf2a2cd4c0be44da7b3b1da645d42b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 0.1
-  currentObject: {fileID: 1854956898994736}
---- !u!114 &114893171974701106
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1854956898994736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6c8a3503d77b424f80a7734d0eee30f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 0}
 --- !u!114 &114922525537831928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1085,12 +1046,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Keywords:
-  - Keyword: Navigate
+  - Keyword: Move
     Response:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114125490771799364}
-          m_MethodName: OnActivateNavigation
+        - m_Target: {fileID: 114182866842090454}
+          m_MethodName: OnMove
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1102,12 +1063,29 @@ MonoBehaviour:
           m_CallState: 2
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-  - Keyword: Move
+  - Keyword: Scale
     Response:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114125490771799364}
-          m_MethodName: OnActivateManipulation
+        - m_Target: {fileID: 114182866842090454}
+          m_MethodName: OnScale
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+  - Keyword: Rotate
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 114182866842090454}
+          m_MethodName: OnRotate
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
