@@ -12,6 +12,8 @@ public class SpatialManipulator : MonoBehaviour
     public float rotationSensitivity = 6f;
     public float scalingSpeed = 0.2f;
 
+    private Vector3 defaultPosition = new Vector3(0, 0.25f, 0);
+
     public ManipulationMode Mode { get; set; }
 
     public void Manipulate(Vector3 manipulationData, ManipulationDataType dataType)
@@ -31,6 +33,13 @@ public class SpatialManipulator : MonoBehaviour
                 Scale(manipulationData);
                 break;
         }
+    }
+
+    public void ResetPosition()
+    {
+        this.transform.localPosition = new Vector3(0, 0.25f, 0);
+        this.transform.localScale = new Vector3(.5f, .5f, .5f);
+        this.transform.localEulerAngles = new Vector3(0, 0, 0);
     }
 
     private void Scale(Vector3 manipulationData)

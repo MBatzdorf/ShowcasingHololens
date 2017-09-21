@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 114477047361305638}
   - component: {fileID: 114512587384886644}
   m_Layer: 0
-  m_Name: ImageTarget_Default
+  m_Name: ImageTarget_DefaultAlex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

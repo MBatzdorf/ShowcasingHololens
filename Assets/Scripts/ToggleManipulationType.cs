@@ -31,6 +31,11 @@ public class ToggleManipulationType : MonoBehaviour {
         ChangeManipulationType(ManipulationMode.SCALING);
     }
 
+    public void OnReset()
+    {
+        ChangeManipulationType(ManipulationMode.NONE);
+    }
+
     private void ChangeManipulationType(ManipulationMode manipulationMode)
     {
         if (gameObject == ObjectStateManager.Instance.SelectedObject)
@@ -42,6 +47,11 @@ public class ToggleManipulationType : MonoBehaviour {
             }
             if (spatialManipulator.Mode != manipulationMode)
             {
+                if(manipulationMode == ManipulationMode.NONE)
+                {
+                    spatialManipulator.ResetPosition();
+                    return;
+                }
                 spatialManipulator.Mode = manipulationMode;
                 Debug.Log("NEW manipulation mode: " + spatialManipulator.Mode);
 
