@@ -5,8 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ToggleManipulationType : MonoBehaviour {
-
-
+    
     private void Start()
     {
     }
@@ -18,7 +17,7 @@ public class ToggleManipulationType : MonoBehaviour {
 
     public void OnMove()
     {
-        ChangeManipulationType(ManipulationMode.MOVEMENT);
+        ChangeManipulationType(ManipulationMode.MOVEMENT);        
     }
         
     public void OnRotate()
