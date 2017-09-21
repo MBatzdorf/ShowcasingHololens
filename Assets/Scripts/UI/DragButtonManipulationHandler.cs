@@ -6,17 +6,33 @@ using UnityEngine.UI;
 using System;
 using UnityEngine.EventSystems;
 
-public class UIManipulationHandler : MonoBehaviour, IPointerUpHandler, IPointerDownHandler, IManipulationHandler {
+public class DragButtonManipulationHandler : MonoBehaviour, IPointerUpHandler, IPointerDownHandler, IManipulationHandler {
 
 	public float movementSpeed = 0.1f;
 	public GameObject currentObject;
 	public Transform cameraTransform;
+	public Image dragImage;
+	public Sprite dragImageActive;
+	public Sprite dragImageInactive;
 
 	private Vector3 previousPosition;
+	private ObjectStateManager stateManager;
 
 	void Start()
 	{
 		InputManager.Instance.AddGlobalListener(gameObject);
+		stateManager = ObjectStateManager.Instance;
+	}
+
+	void Update()
+	{
+		if(gameObject == stateManager.SelectedObject)
+		{
+			dragImage.sprite = dragImageActive;
+		}
+		else{
+			dragImage.sprite = dragImageInactive;
+		}
 	}
 
 	public void OnManipulationCanceled(ManipulationEventData eventData)

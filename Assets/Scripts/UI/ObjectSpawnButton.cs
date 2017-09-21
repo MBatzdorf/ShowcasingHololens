@@ -12,6 +12,9 @@ public class ObjectSpawnButton : MonoBehaviour {
 	private Button spawnButton;
 	private GameObject interactableObject;
 
+	private GameObject interactableObjectChild;
+	private Transform initialChildTransform;
+
 	// Use this for initialization
 	void Start () {
 		spawnButton = gameObject.GetComponent<Button> ();
@@ -27,6 +30,13 @@ public class ObjectSpawnButton : MonoBehaviour {
 			return;
 		objectName.text = go.name;
 		interactableObject = go;
+
+		foreach (Transform t in interactableObject.GetComponentsInChildren<Transform>()) {
+			if (t.tag == "InteractableObjectChild") {
+				interactableObjectChild = t.gameObject;
+				initialChildTransform = t;
+			}
+		}
 	}
 
 
@@ -39,6 +49,9 @@ public class ObjectSpawnButton : MonoBehaviour {
 			interactableObject.transform.SetParent (null);
 			interactableObject.transform.position = spawnPosition.position;
 			interactableObject.transform.localScale = tmpScale;
+			interactableObjectChild.transform.localPosition = initialChildTransform.position;
+			interactableObjectChild.transform.rotation = initialChildTransform.rotation;
+			interactableObjectChild.transform.localScale = initialChildTransform.localScale;
 			interactableObject.GetComponentInChildren<Renderer> ().enabled = true;
 			interactableObject.GetComponentInChildren<Collider> ().enabled = true;
 			interactableObject.GetComponent<AudioSource> ().Play ();
