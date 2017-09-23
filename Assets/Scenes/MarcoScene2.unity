@@ -174,9 +174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ac869b7c13e5a542b695b17a48d0375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cursor: {fileID: 1429643852}
-  HandGuidanceIndicator: {fileID: 0}
-  HandGuidanceThreshold: 0.5
 --- !u!1001 &148540069
 Prefab:
   m_ObjectHideFlags: 0
@@ -571,8 +568,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 15}
-  m_SizeDelta: {x: 0, y: 30}
+  m_AnchoredPosition: {x: 0, y: -12.4}
+  m_SizeDelta: {x: 0, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742515625
 MonoBehaviour:
@@ -660,15 +657,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9852941, g: 0.3767301, b: 0.3767301, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: ddde32675d3c084409a58d795c6e7706, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -765,10 +762,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 8
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -879,8 +876,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 116.1, y: 12.5}
+  m_SizeDelta: {x: 0, y: -25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &948054077
 MonoBehaviour:
@@ -1246,7 +1243,7 @@ Prefab:
     - target: {fileID: 224067273889282386, guid: c7832f2a3dfa1a844ae61a99512af08f,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: -105
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114239178100260346, guid: c7832f2a3dfa1a844ae61a99512af08f,
         type: 2}
@@ -1367,11 +1364,6 @@ MonoBehaviour:
     KeyCode: 110
   - Keyword: Scale
     KeyCode: 115
---- !u!1 &1429643852 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012943254746, guid: b2db04283121ca74495c2ee000fb4243,
-    type: 2}
-  m_PrefabInternal: {fileID: 1123851713}
 --- !u!1 &1764590285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,7 +1476,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -8, y: -8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2114378498
 MonoBehaviour:
@@ -1507,10 +1499,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 5
+    m_FontSize: 4
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1518,9 +1510,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Willkommen!\nDiese Anwendung soll dich beim Lernen unterst\xFCtzen.\n1)
-    Seite aufbl\xE4ttern -> Modell scannen -> Lerne spielend interessante Informationen
-    \xFCber das Objekt\n2) Manuelle Auswahl mit Hilfe der Liste"
+  m_Text: "Willkommen!\n\nDiese Mixed Reality Anwendung unterst\xFCtzt dich beim Lernen!\n\nScanne
+    Modelle aus deinem Lehrbuch und lade sie dadurch als 3D Objekte in deine Umgebung.\n\nInteragiere
+    mit den Modellen, indem du sie im Raum platzierts, rotierst, skalierst oder Animationen
+    abspielst.\n\nIm zus\xE4tzlichen Auswahlmen\xFC findest du alle verf\xFCgbaren
+    Modelle und kannst sie direkt in deine Umgebung laden."
 --- !u!222 &2114378499
 CanvasRenderer:
   m_ObjectHideFlags: 0
