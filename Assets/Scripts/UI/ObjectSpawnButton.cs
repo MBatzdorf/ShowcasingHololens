@@ -13,7 +13,9 @@ public class ObjectSpawnButton : MonoBehaviour {
 	private GameObject interactableObject;
 
 	private GameObject interactableObjectChild;
-	private Transform initialChildTransform;
+	private Vector3 objectStartPosition;
+	private Quaternion objectStartRotation;
+	private Vector3 objectStartScale;
 
 	// Use this for initialization
 	void Start () {
@@ -34,7 +36,9 @@ public class ObjectSpawnButton : MonoBehaviour {
 		foreach (Transform t in interactableObject.GetComponentsInChildren<Transform>()) {
 			if (t.tag == "InteractableObjectChild") {
 				interactableObjectChild = t.gameObject;
-				initialChildTransform = t;
+				objectStartPosition = t.localPosition;
+				objectStartRotation = t.localRotation;
+				objectStartScale = t.localScale;
 			}
 		}
 	}
@@ -49,9 +53,9 @@ public class ObjectSpawnButton : MonoBehaviour {
 			interactableObject.transform.SetParent (null);
 			interactableObject.transform.position = spawnPosition.position;
 			interactableObject.transform.localScale = tmpScale;
-			interactableObjectChild.transform.localPosition = initialChildTransform.position;
-			interactableObjectChild.transform.rotation = initialChildTransform.rotation;
-			interactableObjectChild.transform.localScale = initialChildTransform.localScale;
+			interactableObjectChild.transform.localPosition = objectStartPosition;
+			interactableObjectChild.transform.rotation = objectStartRotation;
+			interactableObjectChild.transform.localScale = objectStartScale;
 			interactableObject.GetComponentInChildren<Renderer> ().enabled = true;
 			interactableObject.GetComponentInChildren<Collider> ().enabled = true;
 			interactableObject.GetComponent<AudioSource> ().Play ();

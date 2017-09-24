@@ -6,32 +6,40 @@ using UnityEngine.UI;
 using System;
 using UnityEngine.EventSystems;
 
-public class DragButtonManipulationHandler : MonoBehaviour, IPointerUpHandler, IPointerDownHandler, IManipulationHandler {
+public class DragButtonManipulationHandler : MonoBehaviour, IManipulationHandler {
 
 	public float movementSpeed = 0.1f;
 	public GameObject currentObject;
 	public Transform cameraTransform;
-	public Image dragImage;
-	public Sprite dragImageActive;
-	public Sprite dragImageInactive;
+	public Color highlightedColor;
 
 	private Vector3 previousPosition;
 	private ObjectStateManager stateManager;
+	private Button dragButton;
 
 	void Start()
 	{
 		InputManager.Instance.AddGlobalListener(gameObject);
 		stateManager = ObjectStateManager.Instance;
+		dragButton = GetComponent<Button> ();
 	}
 
 	void Update()
 	{
 		if(gameObject == stateManager.SelectedObject)
 		{
-			dragImage.sprite = dragImageActive;
+			ColorBlock colors = dragButton.colors;
+			colors.normalColor = highlightedColor;
+			colors.highlightedColor = highlightedColor;
+			colors.pressedColor = highlightedColor;
+			dragButton.colors = colors;
 		}
 		else{
-			dragImage.sprite = dragImageInactive;
+			ColorBlock colors = dragButton.colors;
+			colors.normalColor = Color.white;
+			colors.highlightedColor = Color.white;
+			colors.pressedColor = Color.white;
+			dragButton.colors = colors;
 		}
 	}
 
@@ -47,7 +55,6 @@ public class DragButtonManipulationHandler : MonoBehaviour, IPointerUpHandler, I
 
 	public void OnManipulationStarted(ManipulationEventData eventData)
 	{
-		Debug.Log ("Position update requested");
 		previousPosition = eventData.CumulativeDelta;
 	}
 
@@ -58,28 +65,10 @@ public class DragButtonManipulationHandler : MonoBehaviour, IPointerUpHandler, I
             Vector3 manipulationData = eventData.CumulativeDelta;
             Vector3 directionVector = manipulationData * movementSpeed;
             currentObject.transform.position += directionVector;
-            Debug.Log("Position updated");
         }
         else
         {
             return;
         }
-	}
-
-
-	public void OnPointerDown(PointerEventData eventData)
-	{
-		return;
-		currentObject.transform.SetParent (cameraTransform);
-		Debug.Log ("Mouse down");
-	}
-
-	public void OnPointerUp(PointerEventData eventData)
-	{
-		return;
-		Vector3 tempTransform = currentObject.transform.position;
-		currentObject.transform.SetParent (null);
-		currentObject.transform.position = tempTransform;
-		Debug.Log ("Mouse Up");
 	}
 }
