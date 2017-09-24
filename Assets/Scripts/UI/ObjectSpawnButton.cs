@@ -39,6 +39,14 @@ public class ObjectSpawnButton : MonoBehaviour {
 				objectStartPosition = t.localPosition;
 				objectStartRotation = t.localRotation;
 				objectStartScale = t.localScale;
+
+				Sprite newDisplaySprite = t.gameObject.GetComponent<InteractableMeshBehavior> ().referenceImage;
+				if (newDisplaySprite != null) {
+					objectIcon.sprite = newDisplaySprite;
+				} else {
+					objectIcon.enabled = false;
+				}
+				
 			}
 		}
 	}

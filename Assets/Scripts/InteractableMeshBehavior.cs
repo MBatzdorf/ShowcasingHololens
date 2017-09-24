@@ -8,6 +8,7 @@ public class InteractableMeshBehavior : MonoBehaviour {
 	public Material dissolveMaterial;
 	public float fadeSpeedModifier = 1;
 	public float contextMenuFadeInDelay = 0.25f;
+	public Sprite referenceImage;
 
 	private Dictionary<Renderer, Material> rendMats = new Dictionary<Renderer, Material> ();
 	private Material[] originalMaterials;

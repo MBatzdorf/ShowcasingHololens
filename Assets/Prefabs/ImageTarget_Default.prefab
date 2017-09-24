@@ -1311,6 +1311,7 @@ MonoBehaviour:
   dissolveMaterial: {fileID: 2100000, guid: 836efec87d0d0c045b071f33e0706b26, type: 2}
   fadeSpeedModifier: 1
   contextMenuFadeInDelay: 0.3
+  referenceImage: {fileID: 0}
 --- !u!222 &222100687525129862
 CanvasRenderer:
   m_ObjectHideFlags: 1

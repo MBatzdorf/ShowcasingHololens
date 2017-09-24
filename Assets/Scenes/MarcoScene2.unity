@@ -735,6 +735,12 @@ Prefab:
       propertyPath: m_Name
       value: Helium Atom
       objectReference: {fileID: 0}
+    - target: {fileID: 114988661563986862, guid: d4bfd4f123c290342acaaa685a856d60,
+        type: 2}
+      propertyPath: referenceImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 67a57c1db6ee92d4191cf778dbf4a413,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4bfd4f123c290342acaaa685a856d60, type: 2}
   m_IsPrefabParent: 0
@@ -1099,6 +1105,10 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 520823195}
+    - target: {fileID: 1633323043002646, guid: d4bfd4f123c290342acaaa685a856d60, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4bfd4f123c290342acaaa685a856d60, type: 2}
   m_IsPrefabParent: 0
@@ -1773,6 +1783,12 @@ Prefab:
       propertyPath: m_Name
       value: Wasserstoff
       objectReference: {fileID: 0}
+    - target: {fileID: 114988661563986862, guid: d4bfd4f123c290342acaaa685a856d60,
+        type: 2}
+      propertyPath: referenceImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 2b3566d4a0412164bb89558e5b0d03ca,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4bfd4f123c290342acaaa685a856d60, type: 2}
   m_IsPrefabParent: 0
@@ -2182,6 +2198,12 @@ Prefab:
       propertyPath: m_Name
       value: Methan
       objectReference: {fileID: 0}
+    - target: {fileID: 114988661563986862, guid: d4bfd4f123c290342acaaa685a856d60,
+        type: 2}
+      propertyPath: referenceImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 04224a1257f11e14895112c57f51b706,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4bfd4f123c290342acaaa685a856d60, type: 2}
   m_IsPrefabParent: 0
@@ -2311,6 +2333,21 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224067273889282386, guid: c7832f2a3dfa1a844ae61a99512af08f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.073690705
+      objectReference: {fileID: 0}
+    - target: {fileID: 224067273889282386, guid: c7832f2a3dfa1a844ae61a99512af08f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.007916408
+      objectReference: {fileID: 0}
+    - target: {fileID: 224214093924207374, guid: c7832f2a3dfa1a844ae61a99512af08f,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7832f2a3dfa1a844ae61a99512af08f, type: 2}
