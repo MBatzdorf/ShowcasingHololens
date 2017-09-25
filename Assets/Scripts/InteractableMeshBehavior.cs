@@ -47,8 +47,10 @@ public class InteractableMeshBehavior : MonoBehaviour {
 		Animator anim = GetComponentInChildren<Animator> ();
 
 		if (anim != null) {
-			if(anim.runtimeAnimatorController.animationClips.Length > 1)
-				anim.Play ("Run");
+			if (anim.runtimeAnimatorController != null) {
+				if (anim.runtimeAnimatorController.animationClips.Length > 1)
+					anim.Play ("Run");
+			}
 		}
 	}
 

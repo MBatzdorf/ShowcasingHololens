@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Lithium" size="1.000000 0.750000" />
+    <ImageTarget name="Beryllium" size="1.000000 1.200000" />
+    <ImageTarget name="Methanogenese" size="1.000000 1.009132" />
+    <ImageTarget name="Ammoniak" size="1.000000 0.757282" />
+    <ImageTarget name="Methan" size="1.000000 1.146067" />
+    <ImageTarget name="Kohlenstoffdioxid" size="1.000000 0.711111" />
+    <ImageTarget name="Wasserstoff" size="1.000000 0.761290" />
+  </Tracking>
+</QCARConfig>
